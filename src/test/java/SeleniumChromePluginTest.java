@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
@@ -18,9 +19,11 @@ public class SeleniumChromePluginTest {
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
+        //driver = new ChromeDriver(options);
+
+        WebDriver driver = new HtmlUnitDriver();
         baseUrl = "https://www.katalon.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

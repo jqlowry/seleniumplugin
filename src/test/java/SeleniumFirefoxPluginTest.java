@@ -3,6 +3,7 @@ import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
@@ -17,10 +18,11 @@ public class SeleniumFirefoxPluginTest {
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
+        //FirefoxOptions options = new FirefoxOptions();
+        //options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
 
-        driver = new FirefoxDriver(options);
+        //driver = new FirefoxDriver(options);
+        WebDriver driver = new HtmlUnitDriver();
         baseUrl = "https://www.katalon.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
