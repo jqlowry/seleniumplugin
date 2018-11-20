@@ -22,7 +22,7 @@ public class SeleniumFirefoxPluginTest {
         //options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
 
         //driver = new FirefoxDriver(options);
-        WebDriver driver = new HtmlUnitDriver();
+        driver = new HtmlUnitDriver();
         baseUrl = "https://www.katalon.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

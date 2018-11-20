@@ -19,11 +19,11 @@ public class SeleniumChromePluginTest {
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
-        //driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
 
-        WebDriver driver = new HtmlUnitDriver();
+        //driver = new HtmlUnitDriver();
         baseUrl = "https://www.katalon.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

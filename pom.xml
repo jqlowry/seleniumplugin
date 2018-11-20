@@ -23,20 +23,21 @@
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-htmlunit-driver</artifactId>
-            <version>2.52.0</version>
+            <artifactId>htmlunit-driver</artifactId>
+            <version>2.33.1</version>
         </dependency>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>3.141.59</version>
+            <groupId>org.seleniumhq.webdriver</groupId>
+            <artifactId>webdriver-chrome</artifactId>
+            <version>0.9.7376</version>
         </dependency>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.141.59</version>
+            <groupId>org.seleniumhq.webdriver</groupId>
+            <artifactId>webdriver-firefox</artifactId>
+            <version>0.9.7376</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
