@@ -3,6 +3,8 @@ package com.example.tests;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.*;
@@ -19,10 +21,9 @@ public class umloginTest {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    FirefoxOptions options = new FirefoxOptions();
+    ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
-
-    driver = new FirefoxDriver(options);
+    driver = new ChromeDriver(options);
 
     //driver = new HtmlUnitDriver();
     baseUrl = "https://www.katalon.com/";
