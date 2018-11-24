@@ -21,9 +21,9 @@ public class umloginTest {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    ChromeOptions options = new ChromeOptions();
+    FirefoxOptions options = new FirefoxOptions();
     options.addArguments("--headless","--no-sandbox","--disable-dev-shm-usage");
-    driver = new ChromeDriver(options);
+    driver = new FirefoxDriver(options);
 
     //driver = new HtmlUnitDriver();
     baseUrl = "https://www.katalon.com/";
@@ -32,7 +32,11 @@ public class umloginTest {
 
   @Test
   public void testUntitledTestCase() throws Exception {
-    driver.get("http://esbapp-sum-0001:8080/Fractals/");
+      System.out.println("********************");
+      System.out.println("*   Begin Testing Katalon");
+      System.out.println("********************");
+
+      driver.get("http://esbapp-sum-0001:8080/Fractals/");
     driver.findElement(By.id("modal_auth_input_user")).clear();
     driver.findElement(By.id("modal_auth_input_user")).sendKeys("um");
     driver.findElement(By.id("modal_auth_input_pass")).click();
