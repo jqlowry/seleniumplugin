@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
@@ -37,7 +39,10 @@ public class umloginTest {
       System.out.println("********************");
 
       driver.get("http://esbapp-sum-0001:8080/Fractals/");
-    driver.findElement(By.id("modal_auth_input_user")).clear();
+      WebDriverWait wait = new WebDriverWait(driver, 3);
+      //clickable
+      wait.until(ExpectedConditions.elementToBeClickable(By.id("modal_auth_input_user")));
+      driver.findElement(By.id("modal_auth_input_user")).clear();
     driver.findElement(By.id("modal_auth_input_user")).sendKeys("um");
     driver.findElement(By.id("modal_auth_input_pass")).click();
     driver.findElement(By.id("modal_auth_input_pass")).clear();
