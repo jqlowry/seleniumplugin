@@ -39,7 +39,7 @@ public class umloginTest {
       System.out.println("********************");
 
       driver.get("http://esbapp-sum-0001:8080/Fractals/");
-      WebDriverWait wait = new WebDriverWait(driver, 3);
+      WebDriverWait wait = new WebDriverWait(driver, 10);
       //clickable
       wait.until(ExpectedConditions.elementToBeClickable(By.id("modal_auth_input_user")));
       driver.findElement(By.id("modal_auth_input_user")).clear();
