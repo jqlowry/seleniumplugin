@@ -47,8 +47,13 @@ public class umloginTest {
     driver.findElement(By.id("modal_auth_input_pass")).click();
     driver.findElement(By.id("modal_auth_input_pass")).clear();
     driver.findElement(By.id("modal_auth_input_pass")).sendKeys("um");
+
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::button[1]")).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Conversations'])[1]/following::span[1]")));
+
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Conversations'])[1]/following::span[1]")).click();
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")));
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")).click();
   }
 
