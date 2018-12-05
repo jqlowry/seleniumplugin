@@ -53,8 +53,8 @@ public class umloginTest {
 
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Conversations'])[1]/following::span[1]")).click();
 
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")));
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")).click();
+    //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")));
+    //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::span[1]")).click();
   }
 
   @AfterClass(alwaysRun = true)
